@@ -7,14 +7,14 @@
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
+  overflow-x: hidden;
 }
 
-/* Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh 5vw;
+  padding: 1rem 5vw;
   background-color: white;
   position: sticky;
   top: 0;
@@ -22,29 +22,27 @@ body {
 }
 
 .logo img {
-  width: 8vh;
+  width: 50px;
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
   cursor: pointer;
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: #036bfc;
-  transition: 0.3s ease;
+  background: #036bfc;
+  margin: 4px 0;
+  transition: all 0.3s ease;
 }
 
-/* Nav Links */
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 4vw;
+  gap: 2vw;
 }
 
 .nav ul li {
@@ -65,8 +63,8 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 4px;
-  background-color: #1375ff;
+  height: 3px;
+  background-color: #036bfc;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -76,7 +74,6 @@ body {
   transform: scaleX(1);
 }
 
-/* Hero Section */
 .content {
   position: relative;
   background-image: url("background.jpg");
@@ -92,36 +89,33 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .text-wrapper {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   color: white;
 }
 
 .text-wrapper h1 {
-  font-size: 10vw;
+  font-size: 8vw;
   text-shadow: 0 0 5px #d8d8dc, 0 0 10px #d8d8dc;
-  animation: fadein 2s;
 }
 
 .text-wrapper h4 {
-  font-size: 4.5vw;
-  margin-top: 1vh;
+  font-size: 4vw;
   color: rgb(167, 86, 86);
   text-shadow: 0 0 5px #d8d8dc, 0 0 10px #d8d8dc;
 }
 
 .text-wrapper p {
   font-size: 1.2rem;
-  font-weight: bolder;
-  margin-top: 2vh;
+  margin-top: 10px;
   text-shadow: 0 0 5px #d8d8dc, 0 0 10px #d8d8dc;
 }
 
@@ -133,11 +127,9 @@ body {
   color: rgb(106, 176, 246);
 }
 
-/* Execution Section */
 .execution {
   padding: 60px 5vw;
   text-align: center;
-  color: #000;
 }
 
 .execution-heading {
@@ -148,64 +140,58 @@ body {
 .execution-columns {
   display: flex;
   justify-content: center;
-  gap: 10vw;
   flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .execution-box {
-  border-radius: 20px;
-  border: 3px solid rgb(83, 83, 225);
-  width: 40%;
-  min-width: 300px;
+  background: #eef2f7;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
   text-align: left;
-  padding: 20px;
-  background-color: #eef2f7;
+  border: 3px solid #5353e1;
 }
 
 .execution-box h2 {
-  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .execution-box ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 .execution-box ul li {
   position: relative;
   padding-left: 25px;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .execution-box ul li::before {
-  content: "➤";
+  content: '➤';
   position: absolute;
   left: 0;
   top: 0;
   color: black;
-  font-size: 1rem;
 }
 
 .logo_infra {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
 .logo_infra img {
-  border: 2px solid rgb(191, 191, 207);
-  width: 8rem;
-  height: auto;
-  display: block;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -213,20 +199,18 @@ body {
 
   .nav ul {
     position: absolute;
-    top: 10vh;
+    top: 70px;
     right: 0;
-    background-color: white;
+    background: white;
     flex-direction: column;
-    width: 50%;
-    height: auto;
+    align-items: center;
+    width: 100%;
     gap: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    padding: 1rem 0;
+    display: none;
   }
 
   .nav ul.active {
-    transform: translateX(0%);
+    display: flex;
   }
 }
