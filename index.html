@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CollectIQ - Smart Debt Solutions</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="nav">
+  <div class="nav" data-aos="fade-down">
     <div class="logo"><img src="brand_logo.png" alt="Logo" /></div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
@@ -24,7 +26,7 @@
 
   <div class="content">
     <div class="overlay"></div>
-    <div class="text-wrapper">
+    <div class="text-wrapper" data-aos="zoom-in">
       <h1><span class="blue">Collect</span><span class="red">IQ</span></h1>
       <h4>Debt Solution</h4>
       <p>A unique combination of seamless delivery, advanced analytics, and automated strategies.</p>
@@ -32,9 +34,9 @@
   </div>
 
   <section class="execution">
-    <h1 class="execution-heading">Execution</h1>
+    <h1 class="execution-heading" data-aos="fade-up">Execution</h1>
     <div class="execution-columns">
-      <div class="execution-box">
+      <div class="execution-box" data-aos="fade-right">
         <div class="logo_infra"><img src="infra.webp" alt="logo"></div>
         <h2>Infrastructure</h2>
         <ul>
@@ -44,7 +46,7 @@
         </ul>
       </div>
 
-      <div class="execution-box">
+      <div class="execution-box" data-aos="fade-left">
         <div class="logo_infra"><img src="Process.png" alt="logo"></div>
         <h2>Process</h2>
         <ul>
@@ -56,7 +58,10 @@
     </div>
   </section>
 
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 1000, once: true });
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
     }
