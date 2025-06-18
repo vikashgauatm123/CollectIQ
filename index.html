@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CollectIQ - Smart Debt Solutions</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
+
 <body>
   <div class="nav" data-aos="fade-down">
     <div class="logo"><img src="brand_logo.png" alt="Logo" /></div>
@@ -16,14 +18,14 @@
       <div></div>
     </div>
     <ul id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About us</a></li>
+      <li><a href="#content">Home</a></li>
+      <li><a href="#service">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About us</a></li>
     </ul>
   </div>
 
-  <div class="content">
+  <div class="content" id="content">
     <div class="overlay"></div>
     <div class="text-wrapper" data-aos="zoom-in">
       <h1><span class="blue">Collect</span><span class="red">IQ</span></h1>
@@ -81,12 +83,108 @@
     </div>
   </section>
 
+  <section class="box-template" id="service">
+
+    <h1 class="box-heading" data-aos="fade-up"> Our Services </h1>
+    <div class="column-temp">
+      <div class="services-temp" data-aos="fade-right">
+        <div class="logo_temp"><img src="services.png" alt="logo"></div>
+        <ul>
+          <li> Customer profiling Module </li>
+          <li> Digital communication channel performance Module </li>
+          <li> Digital Communication prioritisation Module </li>
+          <li> Quality monitoring Module </li>
+          <li> Process Efficiency module </li>
+          <li> Dialer Strategy Module</li>
+          <li> Strategy validation module</li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="box-template" id="about">
+    <h1 class="box-heading" data-aos="fade-up"> About us </h1>
+    <div class="column-temp">
+      <div class="services-temp" data-aos="fade-right">
+        <div class="logo_temp"><img src="about.png" alt="logo"></div>
+        <p>
+          CollectIQ is the world's leading end to end debt collection platform focused on digitizing the entire
+          collection process. with CollectIQ, our debt collections are made simpler,faster and easier with dignity to
+          the borrower - thus, "Simplifying collection with superior Customer experience".</p>
+        <br>
+        <p>Our E2E collection platform - CollectIQ, empower Financial institutions with AI, ML, and NLP - Driven
+          Technologies to provide a seamless collection experience.
+          Equipped with path breaking advanced features, CollectIQ simplifies the collection workflow thereby enhancing
+          recovery outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="box-template" id="contact">
+
+    <h1 class="box-heading" data-aos="fade-up"> Contact </h1>
+    <div class="column-temp">
+      <div class="services-temp" data-aos="fade-right">
+        <div class="logo_temp"><img src="contact.png" alt="logo"></div>
+        <ul>
+          <li> Email:- info.collectiq@gmail.com </li>
+          <li> Contact No. :- 111111111</li>
+          <li> Website:- XYZ.com</li>
+          <li> Address:- Udyog Vihar Phase-4 Gurugram Haryana</li>
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="brand_logo.png" alt="CollectIQ Footer Logo">
+        <h2>CollectIQ</h2>
+        <p>Smart Debt Solutions with AI & Automation</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#content">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: info.collectiq@gmail.com</p>
+        <p>Phone: 111111111</p>
+        <p>Address: Udyog Vihar Phase-4, Gurugram</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 CollectIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
     }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
   </script>
 </body>
+
 </html>
