@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +10,7 @@
 
 <body>
   <div class="nav" data-aos="fade-down">
-    <div class="logo"><img src="brand_logo.png" alt="Logo" /></div>
+    <div class="logo"><img src="asset/brand_logo.png" alt="Logo" /></div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -27,19 +26,19 @@
 
   <div class="content" id="content">
     <div class="overlay"></div>
-    <div class="text-wrapper" data-aos="zoom-in">
-      <h1><span class="blue">Collect</span><span class="red">IQ</span></h1>
-      <h4>Debt Solution</h4>
-      <p>A unique combination of seamless delivery, advanced analytics, and automated strategies.</p>
+    <div class="text-wrapper" id="text-wrapper">
+      <h1><span class="blue" id="heading1">Collect</span><span class="red" id="heading2">IQ</span></h1>
+      <h4 id="subheading">Debt Solution</h4>
+      <p id="description">A unique combination of seamless delivery, advanced analytics, and automated strategies.</p>
     </div>
   </div>
 
   <section class="execution">
     <h1 class="execution-heading" data-aos="fade-up">Execution</h1>
     <div class="execution-columns">
-
+      <!-- Infrastructure -->
       <div class="execution-box" data-aos="fade-right">
-        <div class="logo_infra"><img src="infra.webp" alt="logo"></div>
+        <div class="logo_infra"><img src="asset/infra.webp" alt="logo"></div>
         <h2>Infrastructure</h2>
         <ul>
           <li>15+ years experience in call center industry.</li>
@@ -48,8 +47,9 @@
         </ul>
       </div>
 
+      <!-- Process -->
       <div class="execution-box" data-aos="fade-left">
-        <div class="logo_infra"><img src="Process.png" alt="logo"></div>
+        <div class="logo_infra"><img src="asset/Process.png" alt="logo"></div>
         <h2>Process</h2>
         <ul>
           <li>Strong agent quality & floor hygiene.</li>
@@ -58,8 +58,9 @@
         </ul>
       </div>
 
+      <!-- Technology -->
       <div class="execution-box" data-aos="fade-right">
-        <div class="logo_infra"><img src="tech.png" alt="logo"></div>
+        <div class="logo_infra"><img src="asset/tech.png" alt="logo"></div>
         <h2>Technology</h2>
         <ul>
           <li>Best in class hardware and IT System.</li>
@@ -69,8 +70,9 @@
         </ul>
       </div>
 
+      <!-- People -->
       <div class="execution-box" data-aos="fade-left">
-        <div class="logo_infra"><img src="people.png" alt="logo"></div>
+        <div class="logo_infra"><img src="asset/people.png" alt="logo"></div>
         <h2>People</h2>
         <ul>
           <li>Highly skilled and experienced workforce.</li>
@@ -79,69 +81,38 @@
           <li>Dedicated account managers.</li>
         </ul>
       </div>
-
     </div>
   </section>
 
-  <section class="box-template" id="service">
-
-    <h1 class="box-heading" data-aos="fade-up"> Our Services </h1>
-    <div class="column-temp">
-      <div class="services-temp" data-aos="fade-right">
-        <div class="logo_temp"><img src="services.png" alt="logo"></div>
-        <ul>
-          <li> Customer profiling Module </li>
-          <li> Digital communication channel performance Module </li>
-          <li> Digital Communication prioritisation Module </li>
-          <li> Quality monitoring Module </li>
-          <li> Process Efficiency module </li>
-          <li> Dialer Strategy Module</li>
-          <li> Strategy validation module</li>
-
-        </ul>
-      </div>
+<section class="pbx-section">
+    <div class="pbx-left">
+      <img src="asset/services.png" alt="Hand dialing office phone">
+    </div>
+    <div class="pbx-right">
+      <h2>Our <span>services</span></h2>
+      <ul class="pbx-features">
+        <li><span>01</span> Customer profiling Module</li>
+        <li><span>02</span> Digital communication channel performance module</li>
+        <li><span>03</span> Digital Communication prioritisation module</li>
+        <li><span>04</span>Quality monitoring Module</li>
+        <li><span>05</span> Process Efficiency module</li>
+        <li><span>06</span> Dialer Strategy Module</li>
+        <li><span>07</span>Strategy validation module</li>
+      </ul>
+      <a href="#" class="read-more">Read More ➤</a>
     </div>
   </section>
-  <section class="box-template" id="about">
-    <h1 class="box-heading" data-aos="fade-up"> About us </h1>
-    <div class="column-temp">
-      <div class="services-temp" data-aos="fade-right">
-        <div class="logo_temp"><img src="about.png" alt="logo"></div>
-        <p>
-          CollectIQ is the world's leading end to end debt collection platform focused on digitizing the entire
-          collection process. with CollectIQ, our debt collections are made simpler,faster and easier with dignity to
-          the borrower - thus, "Simplifying collection with superior Customer experience".</p>
-        <br>
-        <p>Our E2E collection platform - CollectIQ, empower Financial institutions with AI, ML, and NLP - Driven
-          Technologies to provide a seamless collection experience.
-          Equipped with path breaking advanced features, CollectIQ simplifies the collection workflow thereby enhancing
-          recovery outcomes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="box-template" id="contact">
-
-    <h1 class="box-heading" data-aos="fade-up"> Contact </h1>
-    <div class="column-temp">
-      <div class="services-temp" data-aos="fade-right">
-        <div class="logo_temp"><img src="contact.png" alt="logo"></div>
-        <ul>
-          <li> Email:- info.collectiq@gmail.com </li>
-          <li> Contact No. :- 111111111</li>
-          <li> Website:- XYZ.com</li>
-          <li> Address:- Udyog Vihar Phase-4 Gurugram Haryana</li>
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Scroll to top">
+    <span>&#8679;</span>
+  </button>
 
 
-        </ul>
-      </div>
-    </div>
-  </section>
+
+  <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="brand_logo.png" alt="CollectIQ Footer Logo">
+        <img src="asset/brand_logo.png" alt="CollectIQ Footer Logo">
         <h2>CollectIQ</h2>
         <p>Smart Debt Solutions with AI & Automation</p>
       </div>
@@ -155,7 +126,6 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-contact">
         <h4>Contact</h4>
         <p>Email: info.collectiq@gmail.com</p>
@@ -169,22 +139,8 @@
     </div>
   </footer>
 
-
+  <!-- AOS and JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+  <script src="main.js" defer></script>
 </body>
-
 </html>
