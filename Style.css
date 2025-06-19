@@ -1,3 +1,4 @@
+/* style.css */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@ body {
   background: #f9f9f9;
   overflow-x: hidden;
 }
-
+:root{ --main-color:#036bfc;  }
 .nav {
   display: flex;
   justify-content: space-between;
@@ -77,22 +78,20 @@ body {
 
 .content {
   position: relative;
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -131,11 +130,13 @@ body {
 .execution {
   padding: 60px 5vw;
   text-align: center;
+  background-color: white;
 }
 
 .execution-heading {
   font-size: 2.5rem;
   margin-bottom: 40px;
+  color: black;
 }
 
 .execution-columns {
@@ -193,98 +194,13 @@ body {
   border: 2px solid #ccc;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav ul {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-    padding: 1rem 0;
-    display: none;
-  }
-
-  .nav ul.active {
-    display: flex;
-  }
-}
-
-.box-template {
-  padding: 60px 5vw;
-  text-align: center;
-}
-
-.box-heading {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.column-temp {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.services-temp {
-  background: #eef2f7;
-  padding: 2rem;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 450px;
-  text-align: left;
-  border: 3px solid #5353e1;
-}
-
-.execution-box h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.services-temp ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services-temp ul li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 15px;
-}
-
-.services-temp ul li::before {
-  content: '➤';
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: black;
-}
-
-.logo_temp {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.logo_temp img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-}
-
 .main-footer {
   background: #222;
   color: #fff;
   padding: 40px 5vw 20px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -325,6 +241,7 @@ body {
 .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links ul li {
@@ -352,4 +269,159 @@ body {
   border-top: 1px solid #444;
   font-size: 0.85rem;
   color: #aaa;
+  margin-top: 40px;
+}
+
+
+.pbx-section {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.pbx-left {
+  flex: 1;
+}
+
+.pbx-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pbx-right {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url("asset/handset-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.pbx-right h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+
+.pbx-right h2 span {
+  font-weight: bold;
+  color: #170d0d;
+}
+
+.pbx-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.pbx-features li {
+  background-color: #fff;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+  color: #333;
+}
+
+.pbx-features li span {
+  color:var(--main-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.read-more {
+  background-color:var(--main-color);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: fit-content;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background-color: darkblue;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.scroll-top:hover {
+  background: darkblue;
+}
+
+@media (max-width: 900px) {
+  .pbx-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .pbx-left, .pbx-right {
+    flex: unset;
+    width: 100%;
+    min-height: 250px;
+  }
+  .pbx-left img {
+    height: 220px;
+    object-fit: cover;
+  }
+  .pbx-right {
+    padding: 32px 16px;
+    background-size: 90%;
+  }
+  .pbx-right h2 {
+    font-size: 24px;
+  }
+  .pbx-features li {
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pbx-right {
+    padding: 18px 4px;
+    background-size: 120%;
+  }
+  .pbx-right h2 {
+    font-size: 18px;
+  }
+  .pbx-features li {
+    font-size: 13px;
+    padding: 8px 6px;
+  }
+  .read-more {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .scroll-top {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    bottom: 16px;
+    right: 16px;
+  }
 }
