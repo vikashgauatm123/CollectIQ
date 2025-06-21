@@ -1,9 +1,9 @@
 // AOS Initialization
 AOS.init({ duration: 1000, once: true });
 
-// Toggle Menu
+// Toggle Hamburger
 function toggleMenu() {
-  document.getElementById("nav-links").classList.toggle("active");
+  document.getElementById("nav-links").classList.toggle("show");
 }
 
 // Smooth scroll
@@ -13,10 +13,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
+    document.getElementById("nav-links").classList.remove("show"); // close menu after click
   });
 });
 
-// Hero Image + Text Slider
+// Hero Slider
 const slides = [
   {
     image: "asset/background.jpg",
@@ -50,9 +51,57 @@ function updateSlide() {
   document.getElementById("heading2").innerText = current.heading2;
   document.getElementById("subheading").innerText = current.subheading;
   document.getElementById("description").innerText = current.description;
-
   index = (index + 1) % slides.length;
 }
 
 updateSlide();
-setInterval(updateSlide, 5000); // Change every 5 seconds
+setInterval(updateSlide, 5000);
+
+// ===========================
+// 💬 Client-side Chat Popup (JS functions)
+// ===========================
+function togglePopup() {
+  const popup = document.getElementById("popupBox");
+  popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+}
+
+function openBotChat() {
+  document.getElementById("chatbox").style.display = "block";
+}
+
+function closeChat() {
+  document.getElementById("chatbox").style.display = "none";
+}
+
+async function sendMessage() {
+  const input = document.getElementById("user-input");
+  const message = input.value.trim();
+  if (!message) return;
+
+  appendMessage("You", message);
+  input.value = "";
+
+  try {
+    const response = await fetch('http://localhost:5000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+    appendMessage("Laxa", data.reply);
+  } catch (error) {
+    appendMessage("Error", "Failed to get response.");
+  }
+}
+
+function appendMessage(sender, text) {
+  const chat = document.getElementById("chat-messages");
+  const msg = document.createElement("div");
+  msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+  msg.style.margin = "6px 0";
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+
