@@ -1,4 +1,4 @@
-/* style.css */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +10,22 @@ body {
   background: #f9f9f9;
   overflow-x: hidden;
 }
-:root{ --main-color:#036bfc;  }
+
+:root {
+  --main-color: #036bfc;
+}
+
+/* Navigation Bar */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5vw;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: sticky;
   top: 0;
   z-index: 100;
+  opacity: 0.0;
 }
 
 .logo img {
@@ -73,24 +79,27 @@ body {
 
 .nav ul li a:hover::after {
   transform: scaleX(1);
-  color: #444;
 }
 
+/* Hero Section */
 .content {
   position: relative;
-  height: 50vh;
+  height: 89.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   transition: background-image 1s ease-in-out;
+
 }
 
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -127,16 +136,31 @@ body {
   color: rgb(106, 176, 246);
 }
 
+/* Execution Section */
 .execution {
   padding: 60px 5vw;
   text-align: center;
-  background-color: white;
+  background-color: rgb(226, 222, 222);
+
 }
 
 .execution-heading {
   font-size: 2.5rem;
   margin-bottom: 40px;
   color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.execution-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 90px;
+  height: 4px;
+  background-color: var(--main-color);
+  /* Adjust color as needed */
+  border-radius: 2px;
 }
 
 .execution-columns {
@@ -147,13 +171,14 @@ body {
 }
 
 .execution-box {
-  background: #eef2f7;
+  background: #e3e4e6;
   padding: 2rem;
   border-radius: 15px;
   width: 100%;
   max-width: 450px;
   text-align: left;
-  border: 3px solid #5353e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
 }
 
 .execution-box h2 {
@@ -194,11 +219,96 @@ body {
   border: 2px solid #ccc;
 }
 
+/* PBX Section */
+.pbx-section {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ccc;
+
+}
+
+.pbx-left {
+  flex: 1;
+}
+
+.pbx-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pbx-right {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url("asset/handset-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.pbx-right h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+
+.pbx-right h2 span {
+  font-weight: bold;
+  color: #170d0d;
+}
+
+.pbx-features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.pbx-features li {
+  background-color: #fff;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pbx-features li:hover {
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.pbx-features li span {
+  color: var(--main-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.read-more {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: fit-content;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background-color: darkblue;
+}
+
+/* Footer */
 .main-footer {
   background: #222;
   color: #fff;
   padding: 40px 5vw 20px;
-  margin: 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -273,131 +383,70 @@ body {
 }
 
 
-.pbx-section {
-  display: flex;
-  align-items: stretch;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #ccc;
-}
 
-.pbx-left {
-  flex: 1;
-}
-
-.pbx-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.pbx-right {
-  flex: 1;
-  background-color: rgba(255, 255, 255, 0.3);
-  background-image: url("asset/handset-bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.pbx-right h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: var(--main-color);
-}
-
-.pbx-right h2 span {
-  font-weight: bold;
-  color: #170d0d;
-}
-
-.pbx-features {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.pbx-features li {
-  background-color: #fff;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-  border-radius: 4px;
-  font-size: 16px;
-  position: relative;
-  color: #333;
-}
-
-.pbx-features li span {
-  color:var(--main-color);
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.read-more {
-  background-color:var(--main-color);
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  width: fit-content;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.read-more:hover {
-  background-color: darkblue;
-}
-
-.scroll-top {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  background: var(--main-color);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-.scroll-top:hover {
-  background: darkblue;
-}
-
+/* Responsive Media Queries */
 @media (max-width: 900px) {
   .pbx-section {
     flex-direction: column;
     height: auto;
   }
-  .pbx-left, .pbx-right {
-    flex: unset;
+
+  .pbx-left,
+  .pbx-right {
     width: 100%;
     min-height: 250px;
   }
+
   .pbx-left img {
     height: 220px;
-    object-fit: cover;
   }
+
   .pbx-right {
     padding: 32px 16px;
     background-size: 90%;
   }
+
   .pbx-right h2 {
     font-size: 24px;
   }
+
   .pbx-features li {
     font-size: 15px;
     padding: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  #nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links li a {
+    font-size: 1.1rem;
+    color: #036bfc;
+  }
+
+  .content {
+    height: 50vh;
   }
 }
 
@@ -406,17 +455,21 @@ body {
     padding: 18px 4px;
     background-size: 120%;
   }
+
   .pbx-right h2 {
     font-size: 18px;
   }
+
   .pbx-features li {
     font-size: 13px;
     padding: 8px 6px;
   }
+
   .read-more {
     padding: 8px 12px;
     font-size: 14px;
   }
+
   .scroll-top {
     width: 38px;
     height: 38px;
@@ -425,3 +478,245 @@ body {
     right: 16px;
   }
 }
+
+
+
+.about-heading {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+  font-size: x-large;
+  position: relative;
+  font-size: 28px;
+  color: #222;
+}
+
+.about-heading::after {
+  content: '';
+  position: absolute;
+
+  bottom: -8px;
+  width: 90px;
+  height: 4px;
+  background-color: var(--main-color);
+  /* Adjust color as needed */
+  border-radius: 2px;
+}
+
+.about-img {
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  text-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-img img:hover {
+  cursor: pointer;
+}
+
+.about-img img {
+  width: 30vw;
+  border-radius: 10px;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+@media(max-width:768px) {
+
+  .about-img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: none;
+    background-color: white;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .about-img img {
+    width: 100%;
+    margin: none;
+  }
+}
+
+
+.digital-heading {
+  margin: 10px;
+  font-size: 35px;
+  color: #333;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  width: 18rem;
+  height: 18rem;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.box,
+.box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.9s ease;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.front {
+  background-color: var(--main-color);
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.back {
+  background-color: var(--main-color);
+  transform: rotateY(180deg);
+}
+
+.logo-box i {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: white;
+  align-items: center;
+
+}
+
+
+@media (max-width:768px) {
+
+  .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    perspective: 1000px;
+
+  }
+}
+
+
+.digital-heading {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+  font-size: x-large;
+  position: relative;
+  font-size: 28px;
+  color: #222;
+}
+
+.digital-heading::after {
+  content: '';
+  position: absolute;
+
+  bottom: -8px;
+  width: 90px;
+  height: 4px;
+  background-color: var(--main-color);
+  /* Adjust color as needed */
+  border-radius: 2px;
+}
+
+.whatsapp-popup-container {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      background-color: hidden;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 999;
+   
+    }
+
+    .whatsapp-popup-container img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .whatsapp-popup-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      width: 240px;
+      display: none;
+      flex-direction: column;
+      z-index: 999;
+      overflow: hidden;
+  
+    }
+
+    .popup-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .popup-option img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .popup-option:last-child {
+      border-bottom: none;
+    }
+
+    .popup-option:hover {
+      background: #f5f5f5;
+    }
