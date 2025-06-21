@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CollectIQ - Smart Debt Solutions</title>
   <link rel="stylesheet" href="Style.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -32,7 +34,28 @@
       <p id="description">A unique combination of seamless delivery, advanced analytics, and automated strategies.</p>
     </div>
   </div>
+  <section class="about" id="about">
+    <div class="about-heading">
+      <h1 class="fade-up"> About us</h1>
+    </div>
 
+    <div class="about-img" data-aos="fade-left"> <img src="asset/about.png" alt="" />
+
+
+      <div class="about-content">
+        <p>We are committed to leverage technology, analytics and expertise in BFSI segment to lift the customer contact
+          ecosystem in Indian market. We help organizations in scaling up sales, curing delinquencies and customer care
+          units.</p>
+
+        <br>
+
+        <p>We specialize in swift portfolio coverage, segmentation-based communication plans and integrated execution
+          systems. We have a specialized team of 100+ who engage with customer through tele-calling and field visits.
+          These teams are supported by analytics and strategy powered by highly skilled analytics and management team.
+        </p>
+      </div>
+    </div>
+  </section>
   <section class="execution">
     <h1 class="execution-heading" data-aos="fade-up">Execution</h1>
     <div class="execution-columns">
@@ -84,7 +107,7 @@
     </div>
   </section>
 
-<section class="pbx-section">
+  <section class="pbx-section">
     <div class="pbx-left">
       <img src="asset/services.png" alt="Hand dialing office phone">
     </div>
@@ -102,10 +125,101 @@
       <a href="#" class="read-more">Read More ➤</a>
     </div>
   </section>
-  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Scroll to top">
-    <span>&#8679;</span>
-  </button>
+ <section class="digital-communication">
+    <div class="digital-heading"><strong>Digital</strong> Communication</div>
 
+    <div class="box-container">
+      <div class="card">
+        <div class="box front">
+          <div class="logo-box">
+            <i class="fas fa-phone-alt"></i>
+            <div>IVR</div>
+          </div>
+        </div>
+        <div class="box-back back">
+          <p>IVR (Interactive Voice Response) is an automated phone system that interacts with
+            callers using voice or keypad input. </p> <br>
+          <p>It helps route calls, provide information, and handle queries without
+            human assistance.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box front">
+          <div class="logo-box">
+            <i class="fas fa-envelope"></i>
+            <div>Email</div>
+          </div>
+        </div>
+        <div class="box-back back">
+          <p>AI Emailing uses artificial intelligence to write, sort, and respond to emails
+            automatically.</p> <br>
+          <p> It improves communication speed, personalizes content, and reduces manual effort in handling
+            emails.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box front">
+          <div class="logo-box">
+            <i class="fas fa-comment-dots"></i>
+            <div>SMS</div>
+          </div>
+        </div>
+        <div class="box-back back">
+          <p>SMS (Short Message Service) is a text messaging service used to send short text
+            messages between mobile devices. </p> <br>
+          <p>It’s widely used for personal, business, and automated communication.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="box front">
+          <div class="logo-box">
+            <i class="fab fa-whatsapp"></i>
+            <div>WhatsApp</div>
+          </div>
+
+        </div>
+        <div class="box-back back">
+          <p>WhatsApp Real-Time Support allows businesses to interact with customers instantly
+            through chat.</p> <br>
+          <p>It enables quick issue resolution, personalized communication, and better customer engagement
+            using the WhatsApp Business API.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+   <!-- Floating WhatsApp Icon -->
+  <div class="whatsapp-popup-container" onclick="togglePopup()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
+  </div>
+
+  <!-- Popup Menu -->
+  <div class="whatsapp-popup-box" id="popupBox">
+    <a href="https://wa.me/919876543210" target="_blank" class="popup-option">
+      <img src="https://img.icons8.com/color/24/000000/whatsapp--v1.png" />
+      <span>Chat on WhatsApp</span>
+    </a>
+    <div class="popup-option" onclick="openBotChat()">
+      <img src="https://img.icons8.com/emoji/24/person.png" />
+      <span>Hey I'm Laxa. Let's Talk!</span>
+    </div>
+  </div>
+
+  <!-- Chatbot Popup Box -->
+<div id="chatbox" style="display:none; position:fixed; bottom:100px; right:20px; width:300px; background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:1000; font-family:sans-serif;">
+  <div style="background:#2c3e50; color:white; padding:10px; border-radius:10px 10px 0 0;">
+    <strong>Laxa AI Chat</strong>
+    <span onclick="closeChat()" style="float:right; cursor:pointer;">&times;</span>
+  </div>
+  <div id="chat-messages" style="padding:10px; height:200px; overflow-y:auto; font-size:14px;"></div>
+  <div style="display:flex; border-top:1px solid #ccc;">
+    <input id="user-input" type="text" placeholder="Type your message..." style="flex:1; padding:8px; border:none; outline:none;" />
+    <button onclick="sendMessage()" style="padding:8px 10px; border:none; background:#27ae60; color:white; cursor:pointer;">➤</button>
+  </div>
+</div>
 
 
   <!-- Footer -->
@@ -129,7 +243,7 @@
       <div class="footer-contact">
         <h4>Contact</h4>
         <p>Email: info.collectiq@gmail.com</p>
-        <p>Phone: 111111111</p>
+        <p>Phone: 9211864773</p>
         <p>Address: Udyog Vihar Phase-4, Gurugram</p>
       </div>
     </div>
@@ -142,5 +256,13 @@
   <!-- AOS and JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="main.js" defer></script>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
 </body>
+
 </html>
