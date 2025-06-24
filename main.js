@@ -24,14 +24,15 @@ const slides = [
     heading1: "Collect",
     heading2: "IQ",
     subheading: "Debt Solution",
-    description: "A unique combination of seamless delivery, advanced analytics, and automated strategies."
+    description: "A Smart Debt Solutions with AI & Automation"
   },
   {
     image: "asset/financeslide.jpg",
     heading1: "Smart",
-    heading2: "Finance",
-    subheading: "Optimized Lending",
-    description: "We help lenders use automation and AI for higher recovery and lower risk."
+    heading2: "Recovery",
+    subheading: "Optimized Collections",
+    description: "We help financial institutions recover dues efficiently using automation and AI — ensuring faster recovery and minimized risk."
+
   },
   {
     image: "asset/dataslide.avif",
@@ -103,5 +104,26 @@ function appendMessage(sender, text) {
   chat.appendChild(msg);
   chat.scrollTop = chat.scrollHeight;
 }
+
+
+
+
+const tabs = document.querySelectorAll('.module-tab');
+const panes = document.querySelectorAll('.module-pane');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs and panes
+    tabs.forEach(t => t.classList.remove('active'));
+    panes.forEach(p => p.classList.remove('active'));
+
+    // Add active class to clicked tab
+    tab.classList.add('active');
+
+    // Show corresponding pane
+    const paneId = `${tab.dataset.tab}-pane`;
+    document.getElementById(paneId).classList.add('active');
+  });
+});
 
 
