@@ -20,8 +20,8 @@
     </div>
     <ul id="nav-links">
       <li><a href="#content">Home</a></li>
-      <li><a href="#service">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#modules">Services</a></li>
+      <li><a href="#footer">Contact</a></li>
       <li><a href="#about">About us</a></li>
     </ul>
   </div>
@@ -43,15 +43,17 @@
 
 
       <div class="about-content">
-        <p>We are committed to leverage technology, analytics and expertise in BFSI segment to lift the customer contact
-          ecosystem in Indian market. We help organizations in scaling up sales, curing delinquencies and customer care
-          units.</p>
+        <p>CollectIQ is the world's leading end to end debt collection platform focused on digitizing the entire
+          collection process. with CollectIQ, your debt collections are made simpler, faster and easier with dignity to
+          the borrower - thus, "Simplifying collection with superior Customer experience ".
+        </p>
 
         <br>
 
-        <p>We specialize in swift portfolio coverage, segmentation-based communication plans and integrated execution
-          systems. We have a specialized team of 100+ who engage with customer through tele-calling and field visits.
-          These teams are supported by analytics and strategy powered by highly skilled analytics and management team.
+        <p>Our E2E collection platform - CollectIQ, empower Financial institutions with AI, ML, and NLP - Driven
+          Technologies to provide a seamless collection experience.
+          Equipped with path breaking advanced features, CollectIQ simplifies the collection workflow thereby enhancing
+          recovery outcomes.
         </p>
       </div>
     </div>
@@ -107,93 +109,209 @@
     </div>
   </section>
 
-  <section class="pbx-section">
-    <div class="pbx-left">
-      <img src="asset/services.png" alt="Hand dialing office phone">
-    </div>
-    <div class="pbx-right">
-      <h2>Our <span>services</span></h2>
-      <ul class="pbx-features">
-        <li><span>01</span> Customer profiling Module</li>
-        <li><span>02</span> Digital communication channel performance module</li>
-        <li><span>03</span> Digital Communication prioritisation module</li>
-        <li><span>04</span>Quality monitoring Module</li>
-        <li><span>05</span> Process Efficiency module</li>
-        <li><span>06</span> Dialer Strategy Module</li>
-        <li><span>07</span>Strategy validation module</li>
-      </ul>
-      <a href="#" class="read-more">Read More ➤</a>
+  <section class="section" id="modules" style="background-color: var(--medium-gray);">
+    <h2 class="section-title">Key Delivery Modules</h2>
+
+    <div class="modules-container">
+      <div class="module-tabs">
+        <div class="module-tab active" data-tab="profile">Customer Profiling</div>
+        <div class="module-tab" data-tab="digital">Digital Communication</div>
+        <div class="module-tab" data-tab="priority">Communication Priority</div>
+        <div class="module-tab" data-tab="dialer">Dialer Strategy</div>
+      </div>
+
+      <div class="module-content">
+        <div class="module-pane active" id="profile-pane">
+          <h3 class="section-subtitle">Customer Profiling Module</h3>
+
+          <div class="matrix-grid">
+            <div class="matrix-cell">
+              <h4>High Intent to Pay</h4>
+              <p>Low Capacity to Pay</p>
+            </div>
+            <div class="matrix-cell">
+              <h4>High Intent to Pay</h4>
+              <p>High Capacity to Pay</p>
+            </div>
+            <div class="matrix-cell">
+              <h4>Low Intent to Pay</h4>
+              <p>Low Capacity to Pay</p>
+            </div>
+            <div class="matrix-cell">
+              <h4>Low Intent to Pay</h4>
+              <p>High Capacity to Pay</p>
+            </div>
+          </div>
+
+          <div class="customer-profile-grid">
+            <div class="profile-type">
+              <h4><span>1</span> Humour</h4>
+              <ul>
+                <li>Customer types: Sloppy repayment and competitive</li>
+                <li>DPD: 0-30 DPD</li>
+                <li>Balance Band: Across all balance bands</li>
+              </ul>
+            </div>
+
+            <div class="profile-type">
+              <h4><span>2</span> Attention</h4>
+              <ul>
+                <li>Customer types: Sloppy repayment, competitive, Low Capacity and Intentional Default</li>
+                <li>DPD: 0-30 and 30+ DPD</li>
+                <li>Balance Band: All balance bands excluding &lt; 5000 INR accounts</li>
+              </ul>
+            </div>
+
+            <div class="profile-type">
+              <h4><span>3</span> Sarcasm</h4>
+              <ul>
+                <li>Customer types: Competitive, Low Capacity and Intentional Default</li>
+                <li>DPD: 0-30 and 30+ DPD</li>
+                <li>Balance Band: All balance bands excluding &lt; 5000 INR accounts</li>
+              </ul>
+            </div>
+
+            <div class="profile-type">
+              <h4><span>4</span> Aggression</h4>
+              <ul>
+                <li>Customer types: Low Capacity and Intentional Default</li>
+                <li>DPD: 30+ DPD</li>
+                <li>Balance Band: All balance bands excluding &lt; 5000 INR accounts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-pane" id="digital-pane">
+          <h3 class="section-subtitle">Digital Communication & Channel Performance Module</h3>
+          <p>Includes all channels of communication and analytics around customer behaviour at channel level</p>
+
+          <div class="features-grid" style="margin-top: 30px;">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h3>IVR</h3>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-sms"></i>
+              </div>
+              <h3>SMS</h3>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <h3>WhatsApp</h3>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h3>App Notification</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-pane" id="priority-pane">
+          <h3 class="section-subtitle">Digital Communication Priority & Quality Monitoring Module</h3>
+
+          <div class="about-content" style="margin-top: 40px; content: '➤';">
+            <div class="about-text">
+              <h4>Digital Communication Priority</h4>
+              <ul>
+                <li>Propensity model</li>
+                <li>Repayment curve priority model: Best time of the month to reach to a segment</li>
+                <li>Cost benefit: Communication plans at channel level based on cost budgets</li>
+              </ul>
+            </div>
+
+            <div class="about-text">
+              <h4>Quality Monitoring Module</h4>
+              <ul>
+                <li>Realtime call barging and Monitoring</li>
+                <li>CRM for Call Quality management</li>
+                <li>Dashboarding and report out</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-pane" id="dialer-pane">
+          <h3 class="section-subtitle">Dialer Strategy and Validation Module</h3>
+          <ul style="max-width: 600px; margin: 30px auto; text-align: left;">
+            <li>Best Time to Call</li>
+            <li>Penetration requirement/Intensity</li>
+            <li>ACR calculator</li>
+            <li>Resolution: High risk, medium, low risk users</li>
+            <li>Day wise controlling</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
- <section class="digital-communication">
-    <div class="digital-heading"><strong>Digital</strong> Communication</div>
 
-    <div class="box-container">
-      <div class="card">
-        <div class="box front">
-          <div class="logo-box">
-            <i class="fas fa-phone-alt"></i>
-            <div>IVR</div>
-          </div>
+  <section class="section" id="data">
+    <h2 class="section-title">Data Protection & Analytics</h2>
+    <p class="section-description">State of the art infra equipped with Tele Calling, SKIP tracing & field collection
+      teams</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
         </div>
-        <div class="box-back back">
-          <p>IVR (Interactive Voice Response) is an automated phone system that interacts with
-            callers using voice or keypad input. </p> <br>
-          <p>It helps route calls, provide information, and handle queries without
-            human assistance.</p>
-        </div>
+        <h3>Data Protection</h3>
+        <ul>
+          <li>Purging</li>
+          <li>Safe access</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <div class="box front">
-          <div class="logo-box">
-            <i class="fas fa-envelope"></i>
-            <div>Email</div>
-          </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line"></i>
         </div>
-        <div class="box-back back">
-          <p>AI Emailing uses artificial intelligence to write, sort, and respond to emails
-            automatically.</p> <br>
-          <p> It improves communication speed, personalizes content, and reduces manual effort in handling
-            emails.</p>
-        </div>
+        <h3>Analytics Capabilities</h3>
+        <ul>
+          <li>Early Warning Signals</li>
+          <li>SKIP identification</li>
+          <li>Field referrals</li>
+          <li>Advance TC monitoring tools</li>
+          <li>Flagging Fraud and clustered defaults</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <div class="box front">
-          <div class="logo-box">
-            <i class="fas fa-comment-dots"></i>
-            <div>SMS</div>
-          </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-building"></i>
         </div>
-        <div class="box-back back">
-          <p>SMS (Short Message Service) is a text messaging service used to send short text
-            messages between mobile devices. </p> <br>
-          <p>It’s widely used for personal, business, and automated communication.</p>
-        </div>
+        <h3>Infrastructure</h3>
+        <ul>
+          <li>5000+ Sq. feet of call centre floors</li>
+          <li>Highly skilled quality control team</li>
+          <li>High level delivery on SLA and performance</li>
+          <li>Predictive dialling & GSM/PRI/Cloud telephony</li>
+          <li>Accurate reporting & performance dashboards</li>
+        </ul>
       </div>
-
-      <div class="card">
-        <div class="box front">
-          <div class="logo-box">
-            <i class="fab fa-whatsapp"></i>
-            <div>WhatsApp</div>
-          </div>
-
-        </div>
-        <div class="box-back back">
-          <p>WhatsApp Real-Time Support allows businesses to interact with customers instantly
-            through chat.</p> <br>
-          <p>It enables quick issue resolution, personalized communication, and better customer engagement
-            using the WhatsApp Business API.</p>
-        </div>
-      </div>
-
     </div>
   </section>
-   <!-- Floating WhatsApp Icon -->
+
+  <!-- Floating WhatsApp Icon -->
   <div class="whatsapp-popup-container" onclick="togglePopup()">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" />
   </div>
 
   <!-- Popup Menu -->
@@ -209,21 +327,24 @@
   </div>
 
   <!-- Chatbot Popup Box -->
-<div id="chatbox" style="display:none; position:fixed; bottom:100px; right:20px; width:300px; background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:1000; font-family:sans-serif;">
-  <div style="background:#2c3e50; color:white; padding:10px; border-radius:10px 10px 0 0;">
-    <strong>Laxa AI Chat</strong>
-    <span onclick="closeChat()" style="float:right; cursor:pointer;">&times;</span>
+  <div id="chatbox"
+    style="display:none; position:fixed; bottom:100px; right:20px; width:300px; background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:1000; font-family:sans-serif;">
+    <div style="background:#2c3e50; color:white; padding:10px; border-radius:10px 10px 0 0;">
+      <strong>Laxa AI Chat</strong>
+      <span onclick="closeChat()" style="float:right; cursor:pointer;">&times;</span>
+    </div>
+    <div id="chat-messages" style="padding:10px; height:200px; overflow-y:auto; font-size:14px;"></div>
+    <div style="display:flex; border-top:1px solid #ccc;">
+      <input id="user-input" type="text" placeholder="Type your message..."
+        style="flex:1; padding:8px; border:none; outline:none;" />
+      <button onclick="sendMessage()"
+        style="padding:8px 10px; border:none; background:#27ae60; color:white; cursor:pointer;">➤</button>
+    </div>
   </div>
-  <div id="chat-messages" style="padding:10px; height:200px; overflow-y:auto; font-size:14px;"></div>
-  <div style="display:flex; border-top:1px solid #ccc;">
-    <input id="user-input" type="text" placeholder="Type your message..." style="flex:1; padding:8px; border:none; outline:none;" />
-    <button onclick="sendMessage()" style="padding:8px 10px; border:none; background:#27ae60; color:white; cursor:pointer;">➤</button>
-  </div>
-</div>
 
 
   <!-- Footer -->
-  <footer class="main-footer">
+  <footer class="main-footer" id="footer">
     <div class="footer-content">
       <div class="footer-logo">
         <img src="asset/brand_logo.png" alt="CollectIQ Footer Logo">
